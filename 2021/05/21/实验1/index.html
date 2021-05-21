@@ -20,30 +20,43 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="尽所能及">
-<meta property="og:type" content="website">
+  <meta name="description" content="模块一设计一个模块，要求列出系统中所有内核线程的程序名、PID、进程状态、进程优先级、父进程的PID。 实现流程：  执行完以上命令之后，使用lsmod | grep 模块名（showprocess）查看加载的模块是否已经加载成功。  使用指令dmesg &gt; dmesg.log 查看模块初始化的输出信息可以看到在输出的最后可以看到结果。  代码截图 头文件说明   init.h文件包含模块初">
+<meta property="og:type" content="article">
 <meta property="og:title" content="awsling">
-<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:url" content="http://example.com/2021/05/21/%E5%AE%9E%E9%AA%8C1/index.html">
 <meta property="og:site_name" content="awsling">
-<meta property="og:description" content="尽所能及">
+<meta property="og:description" content="模块一设计一个模块，要求列出系统中所有内核线程的程序名、PID、进程状态、进程优先级、父进程的PID。 实现流程：  执行完以上命令之后，使用lsmod | grep 模块名（showprocess）查看加载的模块是否已经加载成功。  使用指令dmesg &gt; dmesg.log 查看模块初始化的输出信息可以看到在输出的最后可以看到结果。  代码截图 头文件说明   init.h文件包含模块初">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2021/05/21/%E5%AE%9E%E9%AA%8C1/实验1.assets/image-20210408234447225.png">
+<meta property="og:image" content="http://example.com/2021/05/21/%E5%AE%9E%E9%AA%8C1/%E5%AE%9E%E9%AA%8C1.assets/image-20210408234701345.png">
+<meta property="og:image" content="http://example.com/2021/05/21/%E5%AE%9E%E9%AA%8C1/%E5%AE%9E%E9%AA%8C1.assets/image-20210408234848960.png">
+<meta property="og:image" content="http://example.com/2021/05/21/%E5%AE%9E%E9%AA%8C1/%E5%AE%9E%E9%AA%8C1.assets/image-20210408234154859.png">
+<meta property="og:image" content="http://example.com/2021/05/21/%E5%AE%9E%E9%AA%8C1/%E5%AE%9E%E9%AA%8C1.assets/image-20210409105454410.png">
+<meta property="og:image" content="http://example.com/2021/05/21/%E5%AE%9E%E9%AA%8C1/%E5%AE%9E%E9%AA%8C1.assets/image-20210408235110245.png">
+<meta property="og:image" content="http://example.com/2021/05/21/%E5%AE%9E%E9%AA%8C1/实验1.assets/image-20210409094515487.png">
+<meta property="og:image" content="http://example.com/2021/05/21/%E5%AE%9E%E9%AA%8C1/实验1.assets/image-20210409094701876.png">
+<meta property="og:image" content="http://example.com/2021/05/21/%E5%AE%9E%E9%AA%8C1/%E5%AE%9E%E9%AA%8C1.assets/image-20210409094723287.png">
+<meta property="og:image" content="http://example.com/2021/05/21/%E5%AE%9E%E9%AA%8C1/%E5%AE%9E%E9%AA%8C1.assets/image-20210409090855623.png">
+<meta property="article:published_time" content="2021-05-21T14:22:50.240Z">
+<meta property="article:modified_time" content="2021-05-14T01:52:08.738Z">
 <meta property="article:author" content="awsling">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2021/05/21/%E5%AE%9E%E9%AA%8C1/实验1.assets/image-20210408234447225.png">
 
-<link rel="canonical" href="http://example.com/">
+<link rel="canonical" href="http://example.com/2021/05/21/%E5%AE%9E%E9%AA%8C1/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>awsling</title>
+  <title> | awsling</title>
   
 
 
@@ -141,9 +154,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
@@ -159,10 +173,9 @@
       <meta itemprop="name" content="awsling">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
+        <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2021/05/21/%E5%AE%9E%E9%AA%8C1/" class="post-title-link" itemprop="url">未命名</a>
-        </h2>
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -192,7 +205,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h3 id="模块一"><a href="#模块一" class="headerlink" title="模块一"></a>模块一</h3><p>设计一个模块，要求列出系统中所有内核线程的程序名、PID、进程状态、进程优先级、父进程的PID。</p>
+        <h3 id="模块一"><a href="#模块一" class="headerlink" title="模块一"></a>模块一</h3><p>设计一个模块，要求列出系统中所有内核线程的程序名、PID、进程状态、进程优先级、父进程的PID。</p>
 <h4 id="实现流程："><a href="#实现流程：" class="headerlink" title="实现流程："></a>实现流程：</h4><img src="实验1.assets/image-20210408234447225.png" alt="image-20210408234447225" style="zoom:80%;" />
 
 <p>执行完以上命令之后，使用<code>lsmod | grep 模块名（showprocess）</code>查看加载的模块是否已经加载成功。</p>
@@ -278,240 +291,30 @@
 
 <p>计算type结构体中成员member在结构体中的偏移量，然后用ptr的值减去这个偏移量，得到type数据结构中的首地址</p>
 
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/21/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AE%9E%E9%AA%8C-%E5%86%85%E6%A0%B8%E6%A8%A1%E5%9D%97/">
+        
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="awsling">
-      <meta itemprop="description" content="尽所能及">
-    </span>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="awsling">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/05/21/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AE%9E%E9%AA%8C-%E5%86%85%E6%A0%B8%E6%A8%A1%E5%9D%97/" class="post-title-link" itemprop="url">未命名</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-05-21 22:19:26" itemprop="dateCreated datePublished" datetime="2021-05-21T22:19:26+08:00">2021-05-21</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-05-14 09:52:08" itemprop="dateModified" datetime="2021-05-14T09:52:08+08:00">2021-05-14</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="模块一"><a href="#模块一" class="headerlink" title="模块一"></a>模块一</h3><p>设计一个模块，要求列出系统中所有内核线程的程序名、PID、进程状态、进程优先级、父进程的PID。</p>
-<h4 id="实现流程："><a href="#实现流程：" class="headerlink" title="实现流程："></a>实现流程：</h4><img src="实验1.assets/image-20210408234447225.png" alt="image-20210408234447225" style="zoom:80%;" />
-
-<p>执行完以上命令之后，使用<code>lsmod | grep 模块名（showprocess）</code>查看加载的模块是否已经加载成功。</p>
-<p><img src="%E5%AE%9E%E9%AA%8C1.assets/image-20210408234701345.png" alt="image-20210408234701345"></p>
-<p>使用指令<code>dmesg &gt; dmesg.log</code> 查看模块初始化的输出信息可以看到在输出的最后可以看到结果。</p>
-<p><img src="%E5%AE%9E%E9%AA%8C1.assets/image-20210408234848960.png" alt="image-20210408234848960"></p>
-<h4 id="代码截图"><a href="#代码截图" class="headerlink" title="代码截图"></a>代码截图</h4><p><img src="%E5%AE%9E%E9%AA%8C1.assets/image-20210408234154859.png" alt="image-20210408234154859"></p>
-<h5 id="头文件说明"><a href="#头文件说明" class="headerlink" title="头文件说明"></a>头文件说明</h5><ul>
-<li>  <code>init.h</code>文件包含模块初始化和清理函数(module_init,module_exit)的定义</li>
-<li>  <code>module.h</code>包含加载模块的函数和符号的定义</li>
-<li>  <code>kernel.h</code>在这里主要包含了printk函数</li>
-<li>  <code>init_task.h</code>是为了引入0号进程，为方便之后的遍历</li>
-<li>  <code>sche.h</code>中引入了task_struct数据结构</li>
-</ul>
-<h5 id="主要代码"><a href="#主要代码" class="headerlink" title="主要代码"></a>主要代码</h5><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">for_each_process(p)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">if</span>(p-&gt;mm == <span class="literal">NULL</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		printk(KERN_ALERT<span class="string">&quot;%s\t%d\t%ld\t%d\t%d\t%d\t\n&quot;</span>,p-&gt;comm,p-&gt;pid,p-&gt;state,p-&gt;normal_prio,p-&gt;static_prio,p-&gt;prio,p-&gt;parent-&gt;pid);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>其中<code>for_each_process</code>函数定义：本操作是对链表操作，next_task表示下一个进程。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> for_each_process(p)\</span></span><br><span class="line"><span class="meta">	for(p=&amp;init_task;(p=next_task(p))!=&amp;init_task;)</span></span><br></pre></td></tr></table></figure>
-
-<p><code>p-&gt;mm</code>表示进程用户地址空间描述符，如果是内核进程则为NULL</p>
-<p>接下来是对进程信息进行打印，printk表示按照日志级别将指定信息输出到控制台或日志文件中。</p>
-<p>其中KERN_ALERT是高优先级 可实现直接打印在控制台上。</p>
-<p>printk中的内容即为我们需要的信息：</p>
-<ul>
-<li>  comm表示进程名称</li>
-<li>  state表示进程状态</li>
-<li>  normal_prio表示常规动态优先级，基于静态优先级和调度策略计算出来的</li>
-<li>  static_prio表示静态优先级</li>
-<li>  prio表示动态优先级</li>
-</ul>
-<p>最后是初始化模块和秦楚模块的注册</p>
-<ul>
-<li>  <code>module_init</code>主要完成模块的注册和申请资源</li>
-<li>  <code>module_exit</code>完成主要和释放资源</li>
-</ul>
-<p>最后的MODULE_LICENSE(“GPL”)表示被许可的模块，</p>
-<h3 id="模块二"><a href="#模块二" class="headerlink" title="模块二"></a>模块二</h3><p>（2）设计一个带参数的模块，其参数为某个进程的PID号，模块的功能是列出该进程的家族信息，包括父进程、兄弟进程和子进程的程序名、PID号、进程状态。</p>
-<p><img src="%E5%AE%9E%E9%AA%8C1.assets/image-20210409105454410.png" alt="image-20210409105454410"></p>
-<p><img src="%E5%AE%9E%E9%AA%8C1.assets/image-20210408235110245.png" alt="image-20210408235110245"></p>
-<img src="实验1.assets/image-20210409094515487.png" alt="image-20210409094515487" style="zoom:80%;" />
-
-<p>验证</p>
-<p>使用<code>pstree -p 0</code>打印进程树，并把它重定向到pstree.log</p>
-<img src="实验1.assets/image-20210409094701876.png" alt="image-20210409094701876" style="zoom:80%;" />
-
-<p><img src="%E5%AE%9E%E9%AA%8C1.assets/image-20210409094723287.png" alt="image-20210409094723287"></p>
-<h4 id="主要代码-1"><a href="#主要代码-1" class="headerlink" title="主要代码"></a>主要代码</h4><p><img src="%E5%AE%9E%E9%AA%8C1.assets/image-20210409090855623.png" alt="image-20210409090855623"></p>
-<h5 id="几个宏"><a href="#几个宏" class="headerlink" title="几个宏"></a>几个宏</h5><p><code>list_for_each</code>遍历整个链表</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> list_for_each(pos,head)\</span></span><br><span class="line"><span class="meta">	for(pos=(head)-&gt;next;pos!=(head);pos=pos-&gt;next)</span></span><br></pre></td></tr></table></figure>
-
-<p><code>list_entry</code>获取该指节点的其他指针域</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> list_entry(ptr,type,member)\</span></span><br><span class="line"><span class="meta">	container_of(ptr,type,member)</span></span><br></pre></td></tr></table></figure>
-
-<p><code>container_of</code>以下定义</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> container_of(ptr,type,member)(&#123;\</span></span><br><span class="line"><span class="meta">	const typeof((type*)0-&gt;member) *__mptr = (ptr);\</span></span><br><span class="line"><span class="meta">	(type*)((char*)__mptr - offsetof(type,member));&#125;)</span></span><br></pre></td></tr></table></figure>
-
-<p>计算type结构体中成员member在结构体中的偏移量，然后用ptr的值减去这个偏移量，得到type数据结构中的首地址</p>
-<h5 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h5><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">pid</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	<span class="keyword">atomic_t</span> count;</span><br><span class="line">	<span class="keyword">unsigned</span> <span class="keyword">int</span> level;</span><br><span class="line">	<span class="comment">/* lists of tasks that use this pid */</span></span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">hlist_head</span> <span class="title">tasks</span>[<span class="title">PIDTYPE_MAX</span>];</span></span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">rcu_head</span> <span class="title">rcu</span>;</span></span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">upid</span> <span class="title">numbers</span>[1];</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<p><code>pid_task</code> 函数用来获取进程的进程描述符信息。此进程在进程pid的使用链表中，并且搜索的链表的起始元素的下标为参数type的值。  参数pid是struct pid类型的指针变量，保存进程描述符信息，其定义及详细解释请读者自行参考本章函数find_get_pid( )分析文档的返回参数说明部分</p>
-<p><code>rcu</code>主要针对的数据对象是链表，目的是提高遍历读取数据的效率，为了达到目的使用RCU机制读取数据的时候不对链表进行耗时的加锁操作。这样在同一时间可以有多个线程同时读取该链表，并且允许一个线程对链表进行修改（修改的时候，需要加锁）。</p>
-<p>RCU的基本思想：先创建一个旧数据的<strong>copy</strong>，然后writer更新这个copy，最后再用新的数据替换掉旧的数据。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> hlist_entry(ptr, type, member) container_of(ptr,type,member)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> rcu_dereference_check(p, c) \</span></span><br><span class="line"><span class="meta">	__rcu_dereference_check((p), (c) || rcu_read_lock_held(), __rcu)</span></span><br><span class="line"><span class="class"><span class="keyword">enum</span> <span class="title">pid_type</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">       PIDTYPE_PID,    <span class="comment">//进程的进程号</span></span><br><span class="line">       PIDTYPE_PGID,   <span class="comment">//进程组领头进程的进程号</span></span><br><span class="line">       PIDTYPE_SID,    <span class="comment">//会话领头进程的进程号</span></span><br><span class="line">       PIDTYPE_MAX </span><br><span class="line">&#125;;</span><br><span class="line"><span class="function">struct task_struct *<span class="title">pid_task</span><span class="params">(struct pid *pid, <span class="keyword">enum</span> pid_type type)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">task_struct</span> *<span class="title">result</span> =</span> <span class="literal">NULL</span>;</span><br><span class="line">	<span class="keyword">if</span> (pid) &#123;</span><br><span class="line">		<span class="class"><span class="keyword">struct</span> <span class="title">hlist_node</span> *<span class="title">first</span>;</span></span><br><span class="line">        <span class="comment">// 需要首先需要实现数据同步，这里使用rcu机制，主要时使得他的效率增大。</span></span><br><span class="line">        <span class="comment">// 为了达到目的使用RCU机制读取数据的时候不对链表进行耗时的加锁操作。</span></span><br><span class="line">		first = rcu_dereference_check(hlist_first_rcu(&amp;pid-&gt;tasks[type]),</span><br><span class="line">					      lockdep_tasklist_lock_is_held());</span><br><span class="line">		<span class="keyword">if</span> (first)</span><br><span class="line">            <span class="comment">//获取根据pid获取进程结构体</span></span><br><span class="line">			result = hlist_entry(first, struct task_struct, pids[(type)].node);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br><span class="line">EXPORT_SYMBOL(pid_task);</span><br></pre></td></tr></table></figure>
-
-<p><code>find_vpid</code>根据pid的值查找pid结构体，根据pid的偏移量进行查找</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 这个函数仅仅调用find_pid_ns，根据nr，在当前task所在的namespace下找到nr对应的struct pid结构体</span></span><br><span class="line"><span class="function">struct pid *<span class="title">find_vpid</span><span class="params">(<span class="keyword">int</span> nr)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> find_pid_ns(nr, task_active_pid_ns(current));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">struct pid *<span class="title">find_pid_ns</span><span class="params">(<span class="keyword">int</span> nr, struct pid_namespace *ns)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> idr_find(&amp;ns-&gt;idr, nr);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> *<span class="title">idr_find</span><span class="params">(<span class="keyword">const</span> struct idr *idr, <span class="keyword">unsigned</span> <span class="keyword">long</span> id)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> radix_tree_lookup(&amp;idr-&gt;idr_rt, id - idr-&gt;idr_base);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> *<span class="title">radix_tree_lookup</span><span class="params">(<span class="keyword">const</span> struct radix_tree_root *root, <span class="keyword">unsigned</span> <span class="keyword">long</span> index)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> __radix_tree_lookup(root, index, <span class="literal">NULL</span>, <span class="literal">NULL</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> *__radix_tree_lookup(<span class="keyword">const</span> struct radix_tree_root *root,</span><br><span class="line">			  <span class="keyword">unsigned</span> <span class="keyword">long</span> index, struct radix_tree_node **nodep,</span><br><span class="line">			  <span class="keyword">void</span> __rcu ***slotp)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">radix_tree_node</span> *<span class="title">node</span>, *<span class="title">parent</span>;</span></span><br><span class="line">	<span class="keyword">unsigned</span> <span class="keyword">long</span> maxindex;</span><br><span class="line">	<span class="keyword">void</span> __rcu **slot;</span><br><span class="line"></span><br><span class="line">restart:</span><br><span class="line">	parent = <span class="literal">NULL</span>;</span><br><span class="line">	slot = (<span class="keyword">void</span> __rcu **)&amp;root-&gt;xa_head;</span><br><span class="line">	radix_tree_load_root(root, &amp;node, &amp;maxindex);</span><br><span class="line">	<span class="keyword">if</span> (index &gt; maxindex)</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">while</span> (radix_tree_is_internal_node(node)) &#123;</span><br><span class="line">		<span class="keyword">unsigned</span> offset;</span><br><span class="line"></span><br><span class="line">		parent = entry_to_node(node);</span><br><span class="line">		offset = radix_tree_descend(parent, &amp;node, index);</span><br><span class="line">		slot = parent-&gt;slots + offset;</span><br><span class="line">		<span class="keyword">if</span> (node == RADIX_TREE_RETRY)</span><br><span class="line">			<span class="keyword">goto</span> restart;</span><br><span class="line">		<span class="keyword">if</span> (parent-&gt;shift == <span class="number">0</span>)</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (nodep)</span><br><span class="line">		*nodep = parent;</span><br><span class="line">	<span class="keyword">if</span> (slotp)</span><br><span class="line">		*slotp = slot;</span><br><span class="line">	<span class="keyword">return</span> node;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="验收问题"><a href="#验收问题" class="headerlink" title="验收问题"></a>验收问题</h4><h5 id="task-stuct-gt-mm"><a href="#task-stuct-gt-mm" class="headerlink" title="task_stuct-&gt;mm"></a>task_stuct-&gt;mm</h5><p>每当内核执行上下文切换时, 虚拟地址空间的用户层部分都会切换, 以便当前运行的进程匹配, 而内核空间不会放生切换。</p>
-<p>对于普通用户进程来说，mm指向虚拟地址空间的用户空间部分，而对于内核线程，mm为NULL。</p>
-<h6 id="源码部分"><a href="#源码部分" class="headerlink" title="源码部分"></a>源码部分</h6><p>mm指向由若干个<code>vm_area_struct</code>描述的虚拟空间</p>
-<p><code>vm_area_struct</code>中存放了当前虚拟空间的开始<code>vm_start</code>和结束<code>vm_end</code>地址，还存放了下一个虚拟空间<code>vm_next</code>和上一个虚拟空间<code>vm_next</code></p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">mm_struct</span> &#123;</span></span><br><span class="line">	<span class="class"><span class="keyword">struct</span> &#123;</span></span><br><span class="line">		<span class="class"><span class="keyword">struct</span> <span class="title">vm_area_struct</span> *<span class="title">mmap</span>;</span>		<span class="comment">/* list of VMAs */</span></span><br><span class="line">		<span class="class"><span class="keyword">struct</span> <span class="title">rb_root</span> <span class="title">mm_rb</span>;</span></span><br><span class="line">		u64 vmacache_seqnum;                   <span class="comment">/* per-thread vmacache */</span></span><br><span class="line">		...</span><br><span class="line">		<span class="keyword">unsigned</span> <span class="keyword">long</span> task_size;	<span class="comment">/* size of task vm space */</span></span><br><span class="line">		<span class="keyword">unsigned</span> <span class="keyword">long</span> highest_vm_end;	<span class="comment">/* highest vma end address */</span></span><br><span class="line">		<span class="keyword">pgd_t</span> * pgd;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">atomic_t</span> mm_users;</span><br><span class="line">		<span class="keyword">atomic_t</span> mm_count;</span><br><span class="line">		...</span><br><span class="line">		<span class="keyword">int</span> map_count;			<span class="comment">/* number of VMAs */</span></span><br><span class="line"></span><br><span class="line">		<span class="keyword">spinlock_t</span> page_table_lock; <span class="comment">/* Protects page tables and some</span></span><br><span class="line"><span class="comment">					     * counters</span></span><br><span class="line"><span class="comment">					     */</span></span><br><span class="line">		<span class="class"><span class="keyword">struct</span> <span class="title">rw_semaphore</span> <span class="title">mmap_sem</span>;</span></span><br><span class="line"></span><br><span class="line">		<span class="class"><span class="keyword">struct</span> <span class="title">list_head</span> <span class="title">mmlist</span>;</span> <span class="comment">/* List of maybe swapped mm&#x27;s.	These</span></span><br><span class="line"><span class="comment">					  * are globally strung together off</span></span><br><span class="line"><span class="comment">					  * init_mm.mmlist, and are protected</span></span><br><span class="line"><span class="comment">					  * by mmlist_lock</span></span><br><span class="line"><span class="comment">					  */</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">		<span class="keyword">unsigned</span> <span class="keyword">long</span> hiwater_rss; <span class="comment">/* High-watermark of RSS usage */</span></span><br><span class="line">		<span class="keyword">unsigned</span> <span class="keyword">long</span> hiwater_vm;  <span class="comment">/* High-water virtual memory usage */</span></span><br><span class="line"></span><br><span class="line">		<span class="keyword">unsigned</span> <span class="keyword">long</span> total_vm;	   <span class="comment">/* Total pages mapped */</span></span><br><span class="line">		<span class="keyword">unsigned</span> <span class="keyword">long</span> locked_vm;   <span class="comment">/* Pages that have PG_mlocked set */</span></span><br><span class="line">		<span class="keyword">unsigned</span> <span class="keyword">long</span> pinned_vm;   <span class="comment">/* Refcount permanently increased */</span></span><br><span class="line">		<span class="keyword">unsigned</span> <span class="keyword">long</span> data_vm;	   <span class="comment">/* VM_WRITE &amp; ~VM_SHARED &amp; ~VM_STACK */</span></span><br><span class="line">		<span class="keyword">unsigned</span> <span class="keyword">long</span> exec_vm;	   <span class="comment">/* VM_EXEC &amp; ~VM_WRITE &amp; ~VM_STACK */</span></span><br><span class="line">		<span class="keyword">unsigned</span> <span class="keyword">long</span> stack_vm;	   <span class="comment">/* VM_STACK */</span></span><br><span class="line">		<span class="keyword">unsigned</span> <span class="keyword">long</span> def_flags;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">spinlock_t</span> arg_lock; <span class="comment">/* protect the below fields */</span></span><br><span class="line">		<span class="keyword">unsigned</span> <span class="keyword">long</span> start_code, end_code, start_data, end_data;</span><br><span class="line">		<span class="keyword">unsigned</span> <span class="keyword">long</span> start_brk, brk, start_stack;</span><br><span class="line">		<span class="keyword">unsigned</span> <span class="keyword">long</span> arg_start, arg_end, env_start, env_end;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">unsigned</span> <span class="keyword">long</span> saved_auxv[AT_VECTOR_SIZE]; <span class="comment">/* for /proc/PID/auxv */</span></span><br><span class="line"></span><br><span class="line">		<span class="comment">/*</span></span><br><span class="line"><span class="comment">		 * Special counters, in some configurations protected by the</span></span><br><span class="line"><span class="comment">		 * page_table_lock, in other configurations by being atomic.</span></span><br><span class="line"><span class="comment">		 */</span></span><br><span class="line">		<span class="class"><span class="keyword">struct</span> <span class="title">mm_rss_stat</span> <span class="title">rss_stat</span>;</span></span><br><span class="line"></span><br><span class="line">		<span class="class"><span class="keyword">struct</span> <span class="title">linux_binfmt</span> *<span class="title">binfmt</span>;</span></span><br><span class="line"></span><br><span class="line">		<span class="comment">/* Architecture-specific MM context */</span></span><br><span class="line">		<span class="keyword">mm_context_t</span> context;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">unsigned</span> <span class="keyword">long</span> flags; <span class="comment">/* Must use atomic bitops to access */</span></span><br><span class="line"></span><br><span class="line">		<span class="class"><span class="keyword">struct</span> <span class="title">core_state</span> *<span class="title">core_state</span>;</span> <span class="comment">/* coredumping support */</span></span><br><span class="line">		...</span><br><span class="line"></span><br><span class="line">	<span class="comment">/*</span></span><br><span class="line"><span class="comment">	 * The mm_cpumask needs to be at the end of mm_struct, because it</span></span><br><span class="line"><span class="comment">	 * is dynamically sized based on nr_cpu_ids.</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="keyword">unsigned</span> <span class="keyword">long</span> cpu_bitmap[];</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">vm_area_struct</span> &#123;</span></span><br><span class="line">	<span class="comment">/* The first cache line has the info for VMA tree walking. */</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">unsigned</span> <span class="keyword">long</span> vm_start;		<span class="comment">/* Our start address within vm_mm. */</span></span><br><span class="line">	<span class="keyword">unsigned</span> <span class="keyword">long</span> vm_end;		<span class="comment">/* The first byte after our end address</span></span><br><span class="line"><span class="comment">					   within vm_mm. */</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">/* linked list of VM areas per task, sorted by address */</span></span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">vm_area_struct</span> *<span class="title">vm_next</span>, *<span class="title">vm_prev</span>;</span></span><br><span class="line"></span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">rb_node</span> <span class="title">vm_rb</span>;</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">/*</span></span><br><span class="line"><span class="comment">	 * Largest free memory gap in bytes to the left of this VMA.</span></span><br><span class="line"><span class="comment">	 * Either between this VMA and vma-&gt;vm_prev, or between one of the</span></span><br><span class="line"><span class="comment">	 * VMAs below us in the VMA rbtree and its -&gt;vm_prev. This helps</span></span><br><span class="line"><span class="comment">	 * get_unmapped_area find a free area of the right size.</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="keyword">unsigned</span> <span class="keyword">long</span> rb_subtree_gap;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/* Second cache line starts here. */</span></span><br><span class="line"></span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">mm_struct</span> *<span class="title">vm_mm</span>;</span>	<span class="comment">/* The address space we belong to. */</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">/*</span></span><br><span class="line"><span class="comment">	 * Access permissions of this VMA.</span></span><br><span class="line"><span class="comment">	 * See vmf_insert_mixed_prot() for discussion.</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="keyword">pgprot_t</span> vm_page_prot;</span><br><span class="line">	<span class="keyword">unsigned</span> <span class="keyword">long</span> vm_flags;		<span class="comment">/* Flags, see mm.h. */</span></span><br><span class="line">    ...</span><br><span class="line">&#125; __randomize_layout;</span><br></pre></td></tr></table></figure>
-
-<h5 id="进程状态"><a href="#进程状态" class="headerlink" title="进程状态"></a>进程状态</h5><p>在task_struct的进程状态描述符中，使用<code>|</code>的方式将以下进程进行解释，如1026=1024+2=0x0400|0x0002，则表示该进程的状态为无负载的进程和不可中断。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Used in tsk-&gt;state: */</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> TASK_RUNNING			0x0000 运行中</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> TASK_INTERRUPTIBLE		0x0001 可中断</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> TASK_UNINTERRUPTIBLE		0x0002 不可中断</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> __TASK_STOPPED			0x0004 进程中止</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> __TASK_TRACED			0x0008 已经被追踪</span></span><br><span class="line"><span class="comment">/* Used in tsk-&gt;exit_state: */</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> EXIT_DEAD			0x0010 进程的最终状态</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> EXIT_ZOMBIE			0x0020 僵尸进程</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> EXIT_TRACE			(EXIT_ZOMBIE | EXIT_DEAD)</span></span><br><span class="line"><span class="comment">/* Used in tsk-&gt;state again: */</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> TASK_PARKED			0x0040 </span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> TASK_DEAD			0x0080 终止进程</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> TASK_WAKEKILL			0x0100 可响应致命信号的不可中断睡眠状态</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> TASK_WAKING			0x0200 正在被唤醒的进程</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> TASK_NOLOAD			0x0400 无负载的进程</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> TASK_NEW			0x0800 新进程</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> TASK_STATE_MAX			0x1000 状态最大值</span></span><br></pre></td></tr></table></figure>
-
-<h5 id="list-entry"><a href="#list-entry" class="headerlink" title="list_entry"></a>list_entry</h5><p>当使用list_for_each宏得到的只是链表中节点的指针，知道了这些节点存放的位置，但是要知道其中的内容还是需要用到list_entry宏，该宏输入参数为某个结构体指针，该结构体的类型，和想要访问的成员。该宏会调用container_of宏，container_of会计算传入的成员和该结构体指针开始地址的偏移量，并返回加上偏移量后内容。</p>
-<p><code>list_entry</code>获取该指节点的其他指针域</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> list_entry(ptr,type,member)\</span></span><br><span class="line"><span class="meta">	container_of(ptr,type,member)</span></span><br></pre></td></tr></table></figure>
-
-<p><code>container_of</code>以下定义</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> container_of(ptr,type,member)(&#123;\</span></span><br><span class="line"><span class="meta">	const typeof((type*)0-&gt;member) *__mptr = (ptr);\</span></span><br><span class="line"><span class="meta">	(type*)((char*)__mptr - offsetof(type,member));&#125;)</span></span><br></pre></td></tr></table></figure>
-
-<p>计算type结构体中成员member在结构体中的偏移量，然后用ptr的值减去这个偏移量，得到type数据结构中的首地址</p>
-
-      
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/05/21/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AE%9E%E9%AA%8C-%E5%86%85%E6%A0%B8%E6%A8%A1%E5%9D%97/" rel="prev" title="">
+      <i class="fa fa-chevron-left"></i> 
+    </a></div>
+      <div class="post-nav-item"></div>
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
       </footer>
+    
   </article>
   
   
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/21/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="awsling">
-      <meta itemprop="description" content="尽所能及">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="awsling">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/05/21/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-05-21 21:52:00" itemprop="dateCreated datePublished" datetime="2021-05-21T21:52:00+08:00">2021-05-21</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
   
 
 
@@ -564,6 +367,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A8%A1%E5%9D%97%E4%B8%80"><span class="nav-number">1.</span> <span class="nav-text">模块一</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%9E%E7%8E%B0%E6%B5%81%E7%A8%8B%EF%BC%9A"><span class="nav-number">1.1.</span> <span class="nav-text">实现流程：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E6%88%AA%E5%9B%BE"><span class="nav-number">1.2.</span> <span class="nav-text">代码截图</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%A4%B4%E6%96%87%E4%BB%B6%E8%AF%B4%E6%98%8E"><span class="nav-number">1.2.1.</span> <span class="nav-text">头文件说明</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%B8%BB%E8%A6%81%E4%BB%A3%E7%A0%81"><span class="nav-number">1.2.2.</span> <span class="nav-text">主要代码</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A8%A1%E5%9D%97%E4%BA%8C"><span class="nav-number">2.</span> <span class="nav-text">模块二</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%BB%E8%A6%81%E4%BB%A3%E7%A0%81-1"><span class="nav-number">2.1.</span> <span class="nav-text">主要代码</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%87%A0%E4%B8%AA%E5%AE%8F"><span class="nav-number">2.1.1.</span> <span class="nav-text">几个宏</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%87%BD%E6%95%B0"><span class="nav-number">2.1.2.</span> <span class="nav-text">函数</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%AA%8C%E6%94%B6%E9%97%AE%E9%A2%98"><span class="nav-number">2.2.</span> <span class="nav-text">验收问题</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#task-stuct-gt-mm"><span class="nav-number">2.2.1.</span> <span class="nav-text">task_stuct-&gt;mm</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E6%BA%90%E7%A0%81%E9%83%A8%E5%88%86"><span class="nav-number">2.2.1.1.</span> <span class="nav-text">源码部分</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%BF%9B%E7%A8%8B%E7%8A%B6%E6%80%81"><span class="nav-number">2.2.2.</span> <span class="nav-text">进程状态</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#list-entry"><span class="nav-number">2.2.3.</span> <span class="nav-text">list_entry</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
